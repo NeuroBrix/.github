@@ -1,18 +1,18 @@
 <p align="center">
   <img src="https://neurobrix.es/assets/logo.png" alt="NeuroBrix Logo" width="120"/>
-</p>p>
+</p>
 
-<h1 align="center">NeuroBrix</h1>h1>
+<h1 align="center">NeuroBrix</h1>
 
 <p align="center">
   <strong>Universal AI Runtime — Execute Any Model on Any Hardware</strong>strong>
-</p>p>
+</p>
 
 <p align="center">
   <a href="https://neurobrix.es">Website</a>a> •
     <a href="https://github.com/NeuroBrix/neurobrix">Runtime</a>a> •
-      <a href="https://neurobrix.es/docs">Documentation</a>a>
-</p>p>
+      <a href="https://neurobrix.es/docs">Documentation</a>
+</p>
 
 ---
 
@@ -77,5 +77,5 @@ Download models from the [NeuroBrix Models](https://neurobrix.es/models) and run
         ---
 
         <p align="center">
-          <sub>© 2025 WizWorks OÜ • Apache 2.0 License</sub>sub>
+          <sub>© 2026 WizWorks OÜ • Apache 2.0 License</sub>
         </p>p></sub></strong>
