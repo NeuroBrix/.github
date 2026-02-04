@@ -5,12 +5,12 @@
 <h1 align="center">NeuroBrix</h1>
 
 <p align="center">
-  <strong>Universal AI Runtime — Execute Any Model on Any Hardware</strong>strong>
+  <strong>Universal AI Runtime — Execute Any Model on Any Hardware</strong>
 </p>
 
 <p align="center">
-  <a href="https://neurobrix.es">Website</a>a> •
-    <a href="https://github.com/NeuroBrix/neurobrix">Runtime</a>a> •
+  <a href="https://neurobrix.es">Website</a> •
+    <a href="https://github.com/NeuroBrix/neurobrix">Runtime</a> •
       <a href="https://neurobrix.es/docs">Documentation</a>
 </p>
 
@@ -78,4 +78,4 @@ Download models from the [NeuroBrix Models](https://neurobrix.es/models) and run
 
         <p align="center">
           <sub>© 2026 WizWorks OÜ • Apache 2.0 License</sub>
-        </p>p></sub></strong>
+        </p></sub></strong>
