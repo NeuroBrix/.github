@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://neurobrix.es/assets/logo.png" alt="NeuroBrix Logo" width="120"/>
+  <img src="https://raw.githubusercontent.com/NeuroBrix/neurobrix/main/assets/logo.svg" alt="NeuroBrix Logo" width="120"/>
 </p>
 
 <h1 align="center">NeuroBrix</h1>
@@ -48,34 +48,34 @@ Download models from the [NeuroBrix Models](https://neurobrix.es/models) and run
 ## Supported Families
 
 - **Image Generation** — Diffusion models (PixArt, Sana, Flux)
-- - **Language Models** — LLMs (DeepSeek, Llama, Mistral)
-  - - **Audio** — Speech models (Whisper)
-    - - **Video** — Video generation (CogVideoX)
-      -
-      - ## Quick Start
-      -
-      - ```bash
-        pip install neurobrix
+- **Language Models** — LLMs (DeepSeek, Llama, Mistral)
+- **Audio** — Speech models (Whisper)
+- **Video** — Video generation (CogVideoX)
 
-        # Run image generation
-        neurobrix run --model PixArt-Sigma-XL --prompt "A sunset over mountains"
+## Quick Start
 
-        # Run language model
-        neurobrix run --model deepseek-moe-16b --prompt "Explain quantum computing"
-        ```
+```bash
+pip install neurobrix
 
-        ## Projects
+# Run image generation
+neurobrix run --model PixArt-Sigma-XL --prompt "A sunset over mountains"
 
-        | Repository | Description |
-        |------------|-------------|
-        | [neurobrix](https://github.com/NeuroBrix/neurobrix) | Core runtime and inference engine |
+# Run language model
+neurobrix run --model deepseek-moe-16b --prompt "Explain quantum computing"
+```
 
-        ## A WizWorks OÜ Project
+## Projects
 
-        NeuroBrix is developed and maintained by [WizWorks OÜ](https://wizworks.io), a property of [Neural Networks Holding LTD](https://neuralnetworkholding.com).
+| Repository | Description |
+|------------|-------------|
+| [neurobrix](https://github.com/NeuroBrix/neurobrix) | Core runtime and inference engine |
 
-        ---
+## A WizWorks OÜ Project
 
-        <p align="center">
-          <sub>© 2026 WizWorks OÜ • Apache 2.0 License</sub>
-        </p></sub></strong>
+NeuroBrix is developed and maintained by [WizWorks OÜ](https://wizworks.io), a property of [Neural Networks Holding LTD](https://neuralnetworkholding.com).
+
+---
+
+<p align="center">
+  <sub>© 2026 WizWorks OÜ • Apache 2.0 License</sub>
+</p>
