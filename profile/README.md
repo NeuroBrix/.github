@@ -46,12 +46,18 @@ neurobrix run --model Sana_1600M_1024px_MultiLing --prompt "A sunset over mounta
 | Universal Model Format | -- | -- | -- | **NBX (any)** |
 | Cross-Platform | Yes | -- | -- | **Yes** |
 
-## Supported Models (30+)
+## Supported Models (47, across 10 categories)
 
-**Image:** Sana (1K/4K), PixArt-Alpha, PixArt-Sigma, Flex.1-alpha, Janus-Pro-7B
-**Video:** SANA-Video 720p
-**Audio:** Whisper, Whisper V3 Turbo, Parakeet, Canary-Qwen, Granite Speech, Voxtral, Orpheus, Kokoro, VibeVoice, OpenAudio S1, Chatterbox
-**LLM:** DeepSeek-MoE-16B, Qwen3-30B-A3B, TinyLlama
+**Video (11):** Wan2.1 T2V and VACE, CogVideoX, Allegro, Open-Sora, SANA-Video, Mochi
+**Upscaling (8):** Real-ESRGAN, HAT, SwinIR, Swin2SR
+**Image (5):** Sana (1K/4K), PixArt-Alpha, PixArt-Sigma, Flex.1-alpha
+**Multimodal (5):** Qwen3-Omni, Ming-Lite-Omni, Janus-Pro
+**Speech synthesis (5):** Kokoro, VibeVoice, Orpheus, OpenAudio S1, Chatterbox
+**Speech recognition (3):** Whisper Large V2, Whisper V3 Turbo, Parakeet
+**Audio language (3):** Canary-Qwen, Granite Speech, Voxtral
+**Language (3):** DeepSeek-MoE-16B, Qwen3-30B-A3B, TinyLlama
+**Code (3):** DeepSeek-Coder-V2-Lite, Qwen3-Coder-30B-A3B
+**Vision-language (1):** Qwen3-VL-30B-A3B
 
 Browse: **[neurobrix.es/models](https://neurobrix.es/models)**
 
@@ -60,7 +66,7 @@ Browse: **[neurobrix.es/models](https://neurobrix.es/models)**
 | Repository | Description | Status |
 |---|---|---|
 | [**neurobrix**](https://github.com/NeuroBrix/neurobrix) | Core runtime, CLI, Prism solver, NBX format | Public Alpha |
-| **NeuroBrix Studio** | Desktop GUI | Planned |
+| [**neurobrix-studio**](https://github.com/NeuroBrix/neurobrix-studio) | Desktop application for macOS, Windows and Linux — a client of the engine, never a second way to run models | In development |
 
 ## Contributing
 
@@ -69,5 +75,7 @@ Apache 2.0 — contributions welcome. See the [Contributing Guide](https://githu
 ---
 
 <p align="center">
-  <sub>&copy; 2025-2026 Neural Networks Holding LTD &middot; Developed by <a href="https://wizworks.io">WizWorks OÜ</a></sub>
+  <sub>&copy; 2025-2026 &middot; Developed by Hocine Benkelaya &middot;
+  Managed by <a href="https://wizworks.io/">WizWorks OÜ</a>,
+  a property of <a href="https://neuralnetworkholding.com/">NEURAL NETWORK HOLDING LTD</a></sub>
 </p>
