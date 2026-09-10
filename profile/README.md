@@ -75,7 +75,7 @@ Apache 2.0 — contributions welcome. See the [Contributing Guide](https://githu
 ---
 
 <p align="center">
-  <sub>&copy; 2025-2026 &middot; Developed by Hocine Benkelaya &middot;
+  <sub>&copy; 2025-2026 &middot; Developed by <a href="https://www.linkedin.com/in/hocine-benkelaya/">Hocine Benkelaya</a> &middot;
   Managed by <a href="https://wizworks.io/">WizWorks OÜ</a>,
   a property of <a href="https://neuralnetworkholding.com/">NEURAL NETWORK HOLDING LTD</a></sub>
 </p>
