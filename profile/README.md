@@ -109,5 +109,5 @@ Built on open source and giving back to it: [Triton](https://github.com/triton-l
 ---
 
 <p align="center">
-  <sub>&copy; 2025-2026 · Developed by <a href="https://www.linkedin.com/in/hocine-benkelaya/">Hocine Benkelaya</a> · Managed by <a href="https://wizworks.io/">WizWorks OÜ</a>, a property of <a href="https://neuralnetworkholding.com/">NEURAL NETWORK HOLDING LTD</a></sub>
+  <sub>© 2025–2026 Hocine Benkelaya. NeuroBrix engine released under the Apache License 2.0.<br>Developed by <a href="https://www.linkedin.com/in/hocine-benkelaya/">Hocine Benkelaya</a> · Supported and funded by <a href="https://neuralnetworkholding.com">Neural Network Holding Ltd</a> · Commercial distribution by <a href="https://wizworks.io">WizWorks OÜ</a></sub>
 </p>
