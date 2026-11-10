@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://neurobrix.es">Website</a> ·
-  <a href="https://neurobrix.es/models">Model Hub</a> ·
+  <a href="https://neurobrix.org">Website</a> ·
+  <a href="https://neurobrix.org/models">Model Hub</a> ·
   <a href="https://github.com/NeuroBrix/neurobrix">Engine</a> ·
   <a href="https://github.com/NeuroBrix/nbxtensor">nbxtensor</a> ·
   <a href="https://github.com/NeuroBrix/neurobrix-studio">Studio</a> ·
@@ -50,13 +50,13 @@ What we believe:
 | [**nbxtensor**](https://github.com/NeuroBrix/nbxtensor) | The torch-free tensor library behind the Triton engine: tensors, Triton kernels, planned memory and certified tuning. Runs wherever Triton runs: NVIDIA, AMD, Intel and Apple GPUs. Reactivates the tensor cores of the V100. | **Published** · `pip install nbxtensor` |
 | [**NeuroBrix Studio**](https://github.com/NeuroBrix/neurobrix-studio) | The desktop application for everyone who does not live in a terminal, on Linux, Windows and macOS. A client of the engine, never a second way to run models. | In development |
 | [**triton-ext (NeuroBrix build)**](https://github.com/NeuroBrix/triton-ext) | NeuroBrix's own build of Triton for Apple GPUs (Metal), tested, fixed and packaged by NeuroBrix from the upstream backend proposal ([triton-ext#126](https://github.com/triton-lang/triton-ext/pull/126)). Ships the `nbx-triton-apple` wheels, so Triton runs on Apple Silicon today. | macOS arm64 wheels |
-| [**Model Hub**](https://neurobrix.es/models) | The catalogue of ready-to-run `.nbx` containers, each under its own licence, accepted once at import. | 49 models |
+| [**Model Hub**](https://neurobrix.org/models) | The catalogue of ready-to-run `.nbx` containers, each under its own licence, accepted once at import. | 49 models |
 
 ## Get started
 
 ```bash
 pip install neurobrix                         # the light install: Triton engine, no PyTorch
-neurobrix import <model>                      # from the hub at neurobrix.es/models
+neurobrix import <model>                      # from the hub at neurobrix.org/models
 neurobrix run --model <model> --prompt "..."
 ```
 

@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://neurobrix.es">Website</a> ·
+  <a href="https://neurobrix.org">Website</a> ·
   <a href="https://github.com/NeuroBrix/neurobrix">Runtime</a> ·
-  <a href="https://neurobrix.es/models">Model Hub</a> ·
-  <a href="https://neurobrix.es/docs">Documentation</a>
+  <a href="https://neurobrix.org/models">Model Hub</a> ·
+  <a href="https://docs.neurobrix.org">Documentation</a>
 </p>
 
 <p align="center">
