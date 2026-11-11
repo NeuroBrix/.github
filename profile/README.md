@@ -5,7 +5,7 @@
 <h1 align="center">NeuroBrix</h1>
 
 <p align="center">
-  <strong>An open AI ecosystem, built from the tensor up.</strong><br/>
+  <strong>An open AI ecosystem that gives every GPU a life.</strong><br/>
   One engine. One container format. Every modality. Your hardware: Linux, Windows and macOS.
 </p>
 
@@ -37,12 +37,16 @@ NeuroBrix removes the layers. A model becomes **one `.nbx` container**: its grap
 
 What we believe:
 
+- **No hardware is obsolete.** Software walks away from a machine long before its silicon stops working. NeuroBrix gives the hardware you already own a new life.
+- **AI is not an API, and not only a language model.** It is a neural network: text, image, audio, video, measurement, prediction. One engine runs them all.
+- **A function, not a giant.** The real world needs one model that does one job, on the hardware already there. Small machines and large ones use the same engine, the same library and the same tools.
 - **AI belongs on your own hardware.** Local, private, under your control: a workstation, a laptop, a server in a closet.
 - **Simple to use.** `pip install neurobrix`, import a model, run it. One command line for every modality.
 - **Light.** The engine does not drag a multi-gigabyte framework behind it. Our own tensor library replaces it.
 - **Open standards.** One container format and one execution model for every model family, documented and open.
 - **Hardware-neutral.** Linux, Windows and macOS. Your GPU is described by a profile of facts, not by special cases in the code. Validated today on NVIDIA and Apple GPUs; an Intel backend is experimental (not yet validated on hardware by our lab — reports welcome); AMD GPUs are a target.
 - **Measured, never assumed.** Kernel settings are certified on real hardware, and every release is validated model by model through the real entry point, with the output looked at.
+- **Ours, and open.** Our own engine, tensor library, grammar engine, kernels and certification, all under Apache 2.0. We study other projects and learn from the best of each.
 
 ## The ecosystem
 
@@ -51,7 +55,7 @@ What we believe:
 | [**NeuroBrix Engine**](https://github.com/NeuroBrix/neurobrix) | The inference engine and its CLI. It reads `.nbx` containers and runs them with two engines: a **Triton engine** built on nbxtensor, without PyTorch, and an optional PyTorch engine. Prism plans memory and placement across your GPUs; tiling splits what does not fit. | **Stable, 0.6.7** · `pip install neurobrix` |
 | [**nbxtensor**](https://github.com/NeuroBrix/nbxtensor) | The torch-free tensor library behind the Triton engine: tensors, Triton kernels, planned memory and certified tuning. Validated on NVIDIA and Apple GPUs; an experimental Intel backend, not yet validated on hardware by our lab; AMD GPUs are a target. Reactivates the tensor cores of the V100. | **0.1.2** · `pip install nbxtensor` |
 | [**nbxgrammar**](https://github.com/NeuroBrix/nbxgrammar) | NeuroBrix's grammar engine for constrained decoding, in Rust (std only): it compiles a JSON Schema, or a model's own tool-call format, into the token mask applied at every step, so a model can only write what the schema allows. Installed with `pip install neurobrix` where its wheels exist (Linux and macOS on x86_64 and ARM64, Windows on x86_64); the engine's OpenAI API uses it for `response_format: json_schema` and forced tool calls. | **0.1.1** · `pip install nbxgrammar` |
-| **NBX Code** (alias Nibux) | A local coding agent in Rust, independent of the model: it will run on the engine, on your machine. | To come |
+| **NBX Code** (alias Nibux, command `nibux`) | A local coding agent in Rust, independent of the model: it will run against `neurobrix serve`, on your machine, with its tools confined to a sandbox. | To come |
 | [**NeuroBrix Studio**](https://github.com/NeuroBrix/neurobrix-studio) | The desktop application for everyone who does not live in a terminal, on Linux, Windows and macOS. A client of the engine, never a second way to run models. | In development |
 | [**triton-ext (NeuroBrix build)**](https://github.com/NeuroBrix/triton-ext) | NeuroBrix's own build of Triton for Apple GPUs (Metal), tested, fixed and packaged by NeuroBrix from the upstream backend proposal ([triton-ext#126](https://github.com/triton-lang/triton-ext/pull/126)). Ships the `nbx-triton-apple` wheels, so Triton runs on Apple Silicon today. | macOS arm64 wheels |
 | [**Model Hub**](https://neurobrix.org/models) | The catalogue of ready-to-run `.nbx` containers, each under its own licence, accepted once at import. | 49 models |
@@ -92,21 +96,32 @@ Every model is validated through the real entry point, on both engines, with its
 
 NeuroBrix started as an inference engine. It will not stop there: the goal is a complete, open AI stack that you own end to end.
 
+**Next, in order** (no date is promised: each step is published when it is proven on real hardware):
+
+1. **Adding a model becomes a declaration.** The tools that build containers are being reorganised so that a new model is described by an entry (its identity and the envelope it was made for) rather than by new code.
+2. **New models.** Coding models first, then more vision-language, speech-synthesis and image-generation models.
+3. **NBX Code** (Nibux), the local coding agent, in Rust.
+4. **The experimental Intel backend, carried further.** It is in nbxtensor today, written without Intel hardware in our lab and labelled as such.
+5. **nbxtensor 2.0 in Rust**, then the engine itself.
+6. **Training and fine-tuning.**
+
+The full text is the [roadmap](https://github.com/NeuroBrix/neurobrix/blob/main/docs/roadmap.md). The themes behind it:
+
 - **Faster than the frameworks.** On NVIDIA V100s our Triton engine is already faster than the PyTorch engine on 27 of the 49 models (the 0.6.x release gate). Next come kernel fusion, graph-level simplification (operations that cancel out are never computed) and per-model tuning until it leads everywhere.
 - **Every processor.** AMD and Intel GPUs through Triton (an Intel backend is in the engine, experimental: not yet validated on hardware by our lab and open to your reports), many-core CPUs used to their last core, ARM64 laptops and phones, and accelerators beyond GPUs. Multi-GPU across NVLink, PCIe and network links, chosen from the hardware profile.
-- **Community-certified hardware.** Every GPU class certified once by its owners, shared through a pull request, and never tuned again by anyone.
-- **Training.** nbxtensor grows from inference into training and fine-tuning: the same library, the same certified kernels.
-- **Agents.** NBX Code (Nibux), a local coding agent in Rust, independent of the model, then multimodal assistants that see, hear and speak, all running on your machine.
+- **Community-certified hardware.** The goal: every GPU class is certified once by its owners, shared through a pull request, and served to everyone who has that card.
+- **Training.** nbxtensor will grow from inference into training and fine-tuning: the same library, the same certified kernels. A model has an envelope it was trained for; taking it beyond that envelope calls for a fine-tune, and NeuroBrix will do it itself.
+- **Agents.** NBX Code (Nibux, command `nibux`), a local coding agent in Rust, independent of the model, then multimodal assistants that see, hear and speak, all running on your machine.
 - **Integration.** A JSON interface for every command, a terminal UI, and NeuroBrix as an engine inside other tools.
 - **Studio for everyone.** One installer that brings the engine, the models and a real interface to people who will never open a terminal.
-- **Rust, step by step.** The grammar engine first (nbxgrammar, shipped with 0.6.5), then the agent (NBX Code), then nbxtensor 2.0: the tensor library rewritten in Rust for speed and safety, with the same API.
+- **Rust, step by step.** The grammar engine first (nbxgrammar, shipped with 0.6.5), then the agent (NBX Code), then nbxtensor 2.0: the tensor library rewritten in Rust for speed and safety; later, the engine itself.
 - **An open model standard.** `.nbx` as a common container for any model, any family and any hardware: one format the whole ecosystem can read.
 
 ## Contribute
 
 Everything here is Apache 2.0 and open to contributions.
 
-- **Certify your GPU and share it.** Run `neurobrix autotune certify` on your card and open a pull request with the `certificate` template. Every class you certify is a class nobody autotunes again. See the [engine README](https://github.com/NeuroBrix/neurobrix#certify-your-gpu-and-share-it).
+- **Certify your GPU and share it.** Run `neurobrix autotune certify` on your card and open a pull request with the `certificate` template. Every class you certify is served to everyone who has that card. See the [engine README](https://github.com/NeuroBrix/neurobrix#certify-your-gpu-and-share-it).
 - **Report what breaks** on your hardware, and **request a model** through the [engine's issues](https://github.com/NeuroBrix/neurobrix/issues/new/choose).
 - **Code:** read the [contributing guide](https://github.com/NeuroBrix/neurobrix/blob/main/CONTRIBUTING.md).
 
